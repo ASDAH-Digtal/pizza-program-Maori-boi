@@ -27,3 +27,31 @@ label = ttk.Label(root, text = "Here is a random text")
 label.grid(row = 2, column = 0, columnspan = 2)
 
 root.mainloop()
+
+import tkinter
+tk = tkinter.Tk()
+tk.title("Listbox")
+listbox = tkinter.Listbox(tk)
+listbox.pack()
+
+
+text_box = tk.Text(root)
+text_box.pack()
+
+def button_click(entry):
+    print('Entry:', entry.get())
+
+
+for Pizza in regular_pizza:
+    print(Pizza)
+
+    entry = tk.Entry(text_box)
+    entry.insert("end", Pizza)
+
+    button = tk.Button(text_box, text = "Copy Variable", command = lambda x=entry:button_click(x))
+
+    text_box.window_create(text_box.index("end"), window = button)
+    text_box.window_create(text_box.index("end"), window = entry)
+    
+    text_box.insert("end", Pizza)
+    text_box.insert("end", '\n')
