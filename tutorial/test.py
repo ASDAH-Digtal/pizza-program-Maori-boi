@@ -30,31 +30,6 @@ root.mainloop()
 
 import tkinter
 tk = tkinter.Tk()
-tk.title("Listbox")
-listbox = tkinter.Listbox(tk)
-listbox.pack()
-
-
-text_box = tk.Text(root)
-text_box.pack()
-
-def button_click(entry):
-    print('Entry:', entry.get())
-
-
-for Pizza in regular_pizza:
-    print(Pizza)
-
-    entry = tk.Entry(text_box)
-    entry.insert("end", Pizza)
-
-    button = tk.Button(text_box, text = "Copy Variable", command = lambda x=entry:button_click(x))
-
-    text_box.window_create(text_box.index("end"), window = button)
-    text_box.window_create(text_box.index("end"), window = entry)
-    
-    text_box.insert("end", Pizza)
-    text_box.insert("end", '\n')
 
 pizza = tk.IntVar()
 pizza.set(1)
@@ -73,20 +48,23 @@ def calculate_pizza():
 
     result_label1.configure(text = "$".format(result_pizza1 + result_pizza2))
 
+regular_pizza = ["Kai", "Cheese Pizza", "Cool Pizza"]
+gourmet_pizza = ["Pai"]
+
     #Prints out Reciept of total order
 result_label1 = ttk.Label(root, text = "$ ")
 result_label1.grid(row = 1, column = 0, columnspan = 3)
 
 #Customer Details if order is for delivery
-Name = ttk.Entry(root)
-Name.grid(row = 0, column = 1)
+Name_entry = ttk.Entry(root)
+Name_entry.grid(row = 0, column = 1)
 
-Address = ttk.Entry(root)
-Address.grid(row = 1, column = 1)
+Address_entry = ttk.Entry(root)
+Address_entry.grid(row = 1, column = 1)
 
-PhoneNumber = ttk.Entry(root)
-PhoneNumber.grid(row = 2, column = 1)
+PhoneNumber_entry = ttk.Entry(root)
+PhoneNumber_entry.grid(row = 2, column = 1)
 
 #Customer Details if order is for pick up
-Name = ttk.Entry(root)
-Name.grid(row = 0, column = 1)
+Name_entry = ttk.Entry(root)
+Name_entry.grid(row = 0, column = 1)
