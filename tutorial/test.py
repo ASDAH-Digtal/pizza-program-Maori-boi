@@ -38,18 +38,21 @@ def calculate_pizza():
 
     pizza = int(Label.get()) 
 
-    if(pizza==regular_pizza):
+    if(pizza==regularPizza):
         print()
         result_pizza1 = pizza * 8.50
 
-    elif(pizza==gourmet_pizza):
+    elif(pizza==gourmetPizza):
         print()
         result_pizza2 = pizza * 13.50
 
     result_label1.configure(text = "$".format(result_pizza1 + result_pizza2))
 
-regular_pizza = ["Kai", "Cheese Pizza", "Cool Pizza"]
-gourmet_pizza = ["Pai"]
+regularPizza = ["Kai", "Cheese Pizza", "Cool Pizza"]
+gourmetPizza = ["Pai"]
+
+pizza = tk.IntVar
+pizza.set(1, 2)
 
     #Prints out Reciept of total order
 result_label1 = ttk.Label(root, text = "$ ")
