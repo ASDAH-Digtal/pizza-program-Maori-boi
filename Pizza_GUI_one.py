@@ -3,20 +3,6 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.font import BOLD
 
-def calculate_pizza():
-
-    pizza = int(optionmenu1, optionmenu2, optionmenu3, optionmenu4, optionmenu5.get()) 
-
-    if(pizza==regularPizza):
-        print()
-        result_pizza1 = pizza * 8.50
-
-    elif(pizza==gourmetPizza):
-        print()
-        result_pizza2 = pizza * 13.50
-
-    result_label1.configure(text = "$".format(result_pizza1 + result_pizza2))
-
 root = tk.Tk()
 
 variable = tk.StringVar()
@@ -43,10 +29,6 @@ regular_menu.grid(row = 2, column = 0)
 #This widget creates the gourmet pizza menu
 regular_menu = ttk.Label(root, text = "Garlic Shrimp Pizza\nChicken Cranberry Pizza\nBuffalo Chicken Pizza\nMega Meat lovers Pizza\nMeat lovers Hot-dog stuffed Pizza", padding = 10)
 regular_menu.grid(row = 2, column = 1)
-
-#Prints out Reciept of total order
-result_label1 = ttk.Label(root, text = "${}".format())
-result_label1.grid(row = 1, column = 3)
 
 #These widget's creates an OptionMenu for Dream Pizza
 optionmenu1 = ttk.OptionMenu(root, variable, *regularPizza + gourmetPizza)
@@ -85,7 +67,7 @@ cancelButton = ttk.Button(root, text = "Cancel Order", command = Delete)
 cancelButton.grid(row = 8, column = 0)
 
 #Button widget to go to next page
-nextButton = ttk.Button(root, text = "Next", command = calculate_pizza)
+nextButton = ttk.Button(root, text = "Next")
 nextButton.grid(row = 8, column = 1)
 
 root.mainloop()
