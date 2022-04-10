@@ -68,3 +68,7 @@ PhoneNumber_entry.grid(row = 2, column = 1)
 #Customer Details if order is for pick up
 Name_entry = ttk.Entry(root)
 Name_entry.grid(row = 0, column = 1)
+
+#Prints out Reciept of total order
+result_label1 = ttk.Label(root, text = "$ ",command = calculate_pizza)
+result_label1.grid(row = 1, column = 3)
