@@ -75,3 +75,11 @@ Name_entry.grid(row = 0, column = 1)
 #Prints out Reciept of total order
 result_label1 = ttk.Label(root, text = "$ ",command = calculate_pizza)
 result_label1.grid(row = 1, column = 3)
+
+#Button widget to cancel order and 
+cancelButton = ttk.Button(root, text = "Cancel Order")
+cancelButton.grid(row = 8, column = 0)
+
+#Button widget to go to next page
+nextButton = ttk.Button(root, text = "Next")
+nextButton.grid(row = 8, column = 1)
