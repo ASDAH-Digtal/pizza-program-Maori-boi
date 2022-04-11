@@ -40,15 +40,15 @@ optionmenu5.grid(row = 7, column = 1)
 
 
 #These widgets show the price of the pizza
-price_pizza1 = ttk.Label(root, text = "$0.00", padding = 5)
+price_pizza1 = ttk.Label(root, text = "$0.00")
 price_pizza1.grid(row = 3, column = 3)
-price_pizza2 = ttk.Label(root, text = "$0.00", padding = 5)
+price_pizza2 = ttk.Label(root, text = "$0.00")
 price_pizza2.grid(row = 4, column = 3)
-price_pizza3 = ttk.Label(root, text = "$0.00", padding = 5)
+price_pizza3 = ttk.Label(root, text = "$0.00")
 price_pizza3.grid(row = 5, column = 3)
-price_pizza4 = ttk.Label(root, text = "$0.00", padding = 5)
+price_pizza4 = ttk.Label(root, text = "$0.00")
 price_pizza4.grid(row = 6, column = 3)
-price_pizza5 = ttk.Label(root, text = "$0.00", padding = 5)
+price_pizza5 = ttk.Label(root, text = "$0.00")
 price_pizza5.grid(row = 7, column = 3)
 
 #Heading of the GUI
@@ -56,11 +56,11 @@ Heading = ttk.Label(root, text = "Dream Pizza Ordering System: Customer Details"
 Heading.grid(row = 0, column = 0, columnspan = 5)
 
 #Customer Details if order is for delivery
-Name_Label = ttk.Label(root, text = "Name", padding = 5)
+Name_Label = ttk.Label(root, text = "Name")
 Name_Label.grid(row = 10, column = 1)
-Address_Label = ttk.Label(root, text = "Address", padding = 5)
+Address_Label = ttk.Label(root, text = "Address")
 Address_Label.grid(row = 11, column = 1)
-Phone_Label = ttk.Label(root, text = "Phone Number", padding = 5)
+Phone_Label = ttk.Label(root, text = "Phone Number")
 Name_Label = ttk.Label(root, text = "Name")
 Name_Label.grid(row = 10, column = 1)
 Address_Label = ttk.Label(root, text = "Address")
@@ -81,19 +81,6 @@ confirmButton = ttk.Button(root, text = "Confirm Customer Details", padding = 5)
 confirmButton.grid(row = 13, column = 2)
 
 #Label widget to print customer details
-nameLabel = ttk.Label(root, text = "Name: {}".format(Name_entry), padding = 5)
-nameLabel.grid(row = 14, column = 2)
-addressLabel = ttk.Label(root, text ="Address: {}".format(Address_entry), padding = 5)
-addressLabel.grid(row = 15, column = 2)
-phoneLabel = ttk.Label(root, text = "Phone Number: {}".format(Phone_entry), padding = 5)
-phoneLabel.grid(row = 16, column = 2)
-
-#Prints out Reciept of total order
-result_label1 = ttk.Label(root, text = "Total cost: $0.00")
-confirmButton = ttk.Button(root, text = "Confirm Customer Details")
-confirmButton.grid(row = 13, column = 2)
-
-#Label widget to print customer details
 nameLabel = ttk.Label(root, text = "Name: {}".format(Name_entry))
 nameLabel.grid(row = 14, column = 2)
 addressLabel = ttk.Label(root, text ="Address: {}".format(Address_entry))
@@ -102,17 +89,18 @@ phoneLabel = ttk.Label(root, text = "Phone Number: {}".format(Phone_entry))
 phoneLabel.grid(row = 16, column = 2)
 
 #Prints out Reciept of total order
-result_label1 = ttk.Label(root, text = "${}".format())
+result_label1 = ttk.Label(root, text = "Total cost: $0.00")
 result_label1.grid(row = 17, column = 0, columnspan = 5)
+
 
 #Button widget to cancel order and 
 cancelButton = ttk.Button(root, text = "Cancel Order")
-cancelButton.grid(row = 18, column = 0)
+cancelButton.grid(row = 18, column = 1)
 #Button widget to go to complete order
 completeButton = ttk.Button(root, text = "Complete Order")
 completeButton.grid(row = 18, column = 2)
 #Button widget to restart order
 restartButton = ttk.Button(root, text = "Restart Order")
-restartButton.grid(row = 18, column = 4)
+restartButton.grid(row = 18, column = 3)
 
 root.mainloop()
