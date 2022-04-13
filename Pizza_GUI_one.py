@@ -77,7 +77,7 @@ Phone_entry = ttk.Entry(root)
 Phone_entry.grid(row = 12, column = 3)
 
 #Button widget to confirm customer details
-confirmButton = ttk.Button(root, text = "Confirm Customer Details", padding = 5)
+confirmButton = ttk.Button(root, text = "Confirm Customer Details")
 confirmButton.grid(row = 13, column = 2)
 
 #Label widget to print customer details
