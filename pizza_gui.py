@@ -1,13 +1,23 @@
-import tkinter as tk
+from tkinter import *
 from tkinter import ttk
 
-root = tk.Tk()
-root.title()
+regularPizza = 8.50
+gourmetPizza = 13.50
 
-#Lists for each Pizza Menu
-variable = tk.StringVar()
-regularPizza = ["Hawaiian Pizza", "Cheese Pizza", "BBQ Beef and Onion Pizza", "Pepperoni Pizza", "Cheezy Garlic Pizza", "Veggie lover Pizza", "Hot and Spicy Veggie Pizza"]
-gourmetPizza = ["Garlic Shrimp Pizza", "Chicken Cranberry Pizza", "Buffalo Chicken Pizza", "Mega Meat lovers Pizza", "Meat lovers Hot-dog stuffed Pizza"] 
+def update_cost():
+    global regularPizza, gourmetPizza
+    print()
+
+root = Tk()
+root.title("Dream Pizza Ordering Service")
+
+gourmetPizza = StringVar()
+gourmetPizza.set(["Garlic Shrimp Pizza", "Chicken Cranberry Pizza", "Buffalo Chicken Pizza", "Mega Meat lovers Pizza", "Meat lovers Hot-dog stuffed Pizza"]) 
+
+regularPizza = StringVar()
+regularPizza.set(["Hawaiian Pizza", "Cheese Pizza", "BBQ Beef and Onion Pizza", "Pepperoni Pizza", "Cheezy Garlic Pizza", "Veggie lover Pizza", "Hot and Spicy Veggie Pizza"])
+
+
 
 #Heading of the GUI
 top_frame = ttk.Label(root, text = "Dream Pizza Ordering System", font = 'ComicSansMS 12 bold')
